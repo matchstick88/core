@@ -9,10 +9,10 @@ import lecture.core.member.MemoryMemberRepository;
 
 public class OrderServiceImpl implements OrderService{
 
-    private MemberRepository memberRepository;
+    private final MemberRepository memberRepository;
 //    private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
 //    private final DiscountPolicy discountPolicy = new RateDiscountPolicy(); //DIP 위반
-    private DiscountPolicy discountPolicy; //DIP 지킴
+    private final DiscountPolicy discountPolicy; //DIP 지킴
 
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
